@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+:root{
+  --color-primary: #43cea2;
+  --color-secondary: #185a9d;
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px, how? 10px/16px = 62.5%, being 16px the browser default size
+}
+
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  background-image: linear-gradient(to right top, var(--color-primary), var(--color-secondary));
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+h1{
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.main-content{
+  background-color: white;
+  padding: 3rem;
+  border-radius: 2rem;
+}
+
+.content{
+  padding: 20px;
+}
+
+.error {
+  text-align: center;
+}
+
+.alert{
+  border-radius: .25rem;
+  padding: .75rem 1.25rem;
+  margin-bottom: 3rem;
+  border: 1px solid transparent;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.field {
+  margin-bottom: .2rem;
+}

@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import Error from './Error';
 
-const Question = ({saveBudget, saveBudgetLeft}) => {
+const Question = ({saveBudget, saveBudgetLeft, updateQuestion}) => {
 
     const [initialBudget, setBudget ] = useState(0);
 
@@ -27,7 +27,7 @@ const Question = ({saveBudget, saveBudgetLeft}) => {
         setError(false);
         saveBudget(initialBudget);
         saveBudgetLeft(initialBudget);
-
+        updateQuestion(false);
     }
 
     return (  
@@ -40,7 +40,7 @@ const Question = ({saveBudget, saveBudgetLeft}) => {
             >
                 <input
                     type="number"
-                    placeholder="Enter you weekly expense"
+                    placeholder="Enter the money you can spend per week in here"
                     className="u-full-width"
                     onChange={setBudgetState}
                 />

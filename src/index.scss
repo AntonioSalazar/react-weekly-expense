@@ -34,6 +34,13 @@ h1{
   margin: 3rem 0;
 }
 
+h2 {
+  font-weight: 100;
+  margin-bottom:30px;
+  font-size:3rem!important;
+  text-align: center;
+}
+
 .main-content{
   background-color: white;
   padding: 3rem;
@@ -63,4 +70,28 @@ h1{
 
 .field {
   margin-bottom: .2rem;
+}
+
+.expenses  {
+  margin-bottom: 2rem;
+}
+.expenses li{
+  list-style: none;
+  margin-bottom: 0rem;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 1rem 0;
+}
+.expenses li:last-of-type {
+  margin-bottom: 0!important;
+}
+.expenses li p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:0;
+}
+.expenses li p .expense {
+  background-color: #004085;
+  padding: 1rem;
+  color: white;
 }

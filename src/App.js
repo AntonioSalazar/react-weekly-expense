@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import Question from './components/Question';
 import Form from './components/Form';
 import List from './components/List';
@@ -10,14 +10,30 @@ function App() {
   const [budgetLeft, saveBudgetLeft] = useState(0);
   const [ showQuestion, updateQuestion ] = useState(true);
   const [ expensesArray, setExpensesArray ] = useState([]);
+  const [ expense, setExpense ] = useState({});
+  const [ createExpense, setCreateExpense ] = useState(false);
 
-  //This function will get executed whenever we add a new expense
-  const addNewExpense = expense => {
-    setExpensesArray([
-      ...expensesArray,
-      expense
-    ])
-  }
+
+  //UseEffect that will update the budget we have left
+
+  useEffect(() => {
+    if (createExpense) {
+
+      //add the new budget
+      setExpensesArray([
+        ...expensesArray,
+        expense
+      
+      ]);
+
+      //extracts the current expense to the budget
+      const budgetMinusExpense = budgetLeft - expense.amountExpense;
+      saveBudgetLeft(budgetMinusExpense);
+
+      //return serCreateExpense to false
+      setCreateExpense(false);
+    }
+  }, [expense])
 
 
   return (
@@ -41,7 +57,8 @@ function App() {
             <div className="row">
               <div className="one-half column">
                 <Form 
-                  addNewExpense={addNewExpense}
+                  setExpense={setExpense}
+                  setCreateExpense={setCreateExpense}
                 />
               </div>
               <div className="one-half column">

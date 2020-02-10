@@ -9,7 +9,7 @@ There's a section that says how much money they specified and how much the have 
 Deployed in netlify: https://cranky-wescoff-453d45.netlify.com/
 
 How it looks like:
-![](public/img/home.PNG)
+![](public/img/home.png)
 
 
 

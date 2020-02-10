@@ -12,5 +12,13 @@ How it looks like:
 ![](public/img/home.png)
 
 
+This is the screen the user is taken after adding a weekly budget:
+
+![](public/img/screen1.png)
+
+If a user tries to hit 'add expense' with any or both fields empty an error will be shown:
+
+![](public/img/error.png)
+
 
 

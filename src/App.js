@@ -33,7 +33,7 @@ function App() {
       //return serCreateExpense to false
       setCreateExpense(false);
     }
-  }, [expense])
+  }, [expense, budgetLeft, createExpense, expensesArray])
 
 
   return (
